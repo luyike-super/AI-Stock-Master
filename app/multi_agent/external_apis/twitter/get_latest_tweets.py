@@ -6,15 +6,9 @@ import json
 from datetime import datetime
 import logging
 from typing import List, Dict, Any, Optional
-import sys
-from pathlib import Path
 
-# 添加项目根目录到Python路径，以便导入配置模块
-project_root = Path(__file__).resolve().parents[3]  # 上移三级目录到项目根目录
-sys.path.append(str(project_root))
-
-# 导入配置
-from app.external_apis.twitter.config_tweets import TwitterConfig as ConfigClass
+# 修改导入配置路径为相对导入
+from app.multi_agent.external_apis.twitter.config_tweets import TwitterConfig as ConfigClass
 
 # 配置日志
 logging.basicConfig(
